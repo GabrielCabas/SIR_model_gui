@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='static/css/main.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src='https://cdn.plot.ly/plotly-2.4.2.min.js'></script>
+</head>
+<body>
+    <div class="d-flex flex-row">
+        <div class="container-md rounded border border-dark w-50 p-2 m-1 formulario">
+            <h2>Parameters</h2>
+            <label for="N" class="form-label text-left">Number of individues: <span id="label_N"></span></label><br>
+            <input type="range" class="form-range" min="0" max="1000" id="N" name="N">
+            <br>
+            <label for="I0" class="form-label">I0: <span id="label_i0"></span></label><br>
+            <input type="range" class="form-range" min="0" max="500" id="I0" name="I0">
+            <br>
+            <label for="R0" class="form-label">R0: <span id="label_r0"></span></label><br>
+            <input type="range" class="form-range" min="0" max="500" id="R0" name="R0">
+            <br>
+            <label for="betta" class="form-label">Betta: <span id="label_betta"></span></label><br>
+            <input type="range" class="form-range" min="0" max="1" step="0.01" id="betta" name="betta">
+            <br>
+            <label for="gamma" class="form-label">Gamma: <span id="label_gamma"></span></label><br>
+            <input type="range" class="form-range" min="0" max="1" step="0.01" id="gamma" name="gamma">
+        </div>
+        <div class="container-md rounded border border-dark w-50 p-2 m-1 formulario">
+            <h3>Aditional options</h3>
+            <label for="block_size" class="form-label text-left">Block size: <span id="label_block_size"></span></label><br>
+            <input type="range" class="form-range" min="5" max="50" id="block_size" name="block_size">
+            <br>
+            <label for="epsilon" class="form-label text-left">Epsilon: <span id="label_epsilon"></span></label><br>
+            <input type="range" class="form-range" min="0.01" max="1" step="0.01" id="epsilon" name="epsilon">
+            <br>
+            <label for="max_iter" class="form-label text-left">Max iterations: <span id="label_max_iter"></span></label><br>
+            <input type="range" class="form-range" min="1" max="100" id="max_iter" name="max_iter">
+        </div>
+        <script src='static/js/main.js'></script>
+    </div>
+    <div class="container-md w-75" id='plot'></div>
+</body>
+</html>
